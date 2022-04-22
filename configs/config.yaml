@@ -1,0 +1,48 @@
+Log_folder : "Logs"
+
+Data:
+  root_data_folder: data
+  URL: https://download.pytorch.org/tutorial/hymenoptera_data.zip
+  zip data: data.zip
+  unzip_data_dirname : unzip_data
+  main_data_dir : '.\data\unzip_data\hymenoptera_data\train'
+  model_dir : 'model'
+  base_model : base_model.h5
+  trained_model : trained_model.h5
+
+
+  # predicted_data: Prediction
+  # prediction_file: prediction.txt
+
+# artifacts:
+#   model: artifacts
+#   base_model: base_model.pth
+#   trained_model: trained_model.pth
+#   confusion_matrix_fig: confusion_matrix.png
+
+params:
+  BATCH_SIZE : 32
+  pixels : 224
+  rescale : 1./255
+  validation_split : 0.20
+  augmentation : False
+  epochs : 10
+  classes : 2
+  activation_function : softmax
+  metrics : ["accuracy"]
+  learning_rate : 0.01
+  momentum : 0.9
+  epochs_for_training : 10
+
+#   input : 1
+#   output : 10
+#   BATCH_SIZE: 32
+#   LR: 0.001
+#   IMAGE_SIZE: (28,28)
+#   SEED: 2022
+#   no_of_test_data_batches_for_prediction: 3  # 32 or BATCH_SIZE img per no_of_test_data_batches_for_prediction
+
+# Epoch: 1
+
+# evaluation:
+#   no_of_test_batches: 1 #1 batch contain batch_size images
