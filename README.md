@@ -38,3 +38,24 @@ bash init_setup.sh
 ```
 pip install -e .
 ``` 
+
+==================== # Explaination ==============================
+
+Classifies between ants and bees
+
+We use MLops pipeline for this project to smoothen the process and seprate each stage from each other 
+
+This project we divided in 5 stages. we use tenserflow to define our architecture
+
+1) stage for downloading data as zip file , extract zip in defined folder in their respective folder of ants and bees
+
+2) Use vgg-16 CNN Archeitecture layer as our model and create a base model and dump in our defined directory
+
+3) Here we preprocess our images data before passing to our vgg-16 layer and do some data augmentation to generalize our model
+
+4) We train our VGG-16 base model using Stochastic gradient descent as our optimizer and dump our model in defined model directory
+
+5) Stage for prediction 
+
+we create utils directory for all types of function such as some common , data management and for evaluating model. 
+We also consider the situation if we stuck anywhere by creating log files for each and every steps for each stage
